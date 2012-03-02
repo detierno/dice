@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Dice do
-  let(:dice) { Dice.new }
+describe Rdice do
+  let(:dice) { Rdice.new }
   
   describe "new" do
     it "roll one dice" do

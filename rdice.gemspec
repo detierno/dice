@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "dice/version"
+require "rdice/version"
 
 Gem::Specification.new do |s|
   s.name        = "dice"
-  s.version     = Dice::VERSION
+  s.version     = Rdice::VERSION
   s.authors     = ["Denis"]
   s.email       = ["de.tierno@gmail.com"]
   s.homepage    = ""

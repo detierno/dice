@@ -1,4 +1,4 @@
-class Dice
+class Rdice
   class Config
     def self.faces
       @faces

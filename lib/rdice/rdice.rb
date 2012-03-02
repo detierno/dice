@@ -1,7 +1,7 @@
-class Dice
+class Rdice
   def initialize(faces=6, dices=1)
-    Dice::Config.faces = faces
-    Dice::Config.dices = dices
+    Rdice::Config.faces = faces
+    Rdice::Config.dices = dices
   end
 
   def roll(faces=preferred_faces, dices=preferred_dices)
@@ -23,11 +23,11 @@ class Dice
 private
 
   def preferred_faces
-    Dice::Config.faces
+    Rdice::Config.faces
   end
   
   def preferred_dices
-    Dice::Config.dices
+    Rdice::Config.dices
   end
 
   def get_result(faces, dices)
