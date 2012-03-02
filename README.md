@@ -28,9 +28,13 @@ dice.roll_three_d8
 dice.roll_10_d3
 ```
 
-When you call *.roll* method this roll a dice with the defaults faces and dices number (6 and 1). If you want to change the defaults you can in the class creation
-
 This gem comes with shortcuts of one to twenty so you can call *.roll_four_d12*. If you want a dice with more than twenty sides you can explicit declare the number of sides with *.roll_32_d3*
+
+If you call roll with only the number of times you want to roll it will roll the default dice with the required number of times
+
+## Changing the defaults
+
+When you call *.roll* method this roll a dice with the defaults faces and dices number (6 and 1). If you want to change the defaults you can in the class creation
 
 ```ruby
 dice = Dice.new(20,2)
