@@ -7,7 +7,7 @@ This gem was created with studies purpose. It simple create a dice and let you r
 Add to your Gemfile and run the `bundle` command to install it.
 
 ```ruby
-gem "dice"
+gem "dice" # not published yet will not work
 ```
 
 **Requires Ruby 1.9.3 or later.**
@@ -29,6 +29,8 @@ dice.roll_10_d3
 ```
 
 When you call *.roll* method this roll a dice with the defaults faces and dices number (6 and 1). If you want to change the defaults you can in the class creation
+
+This gem comes with shortcuts of one to twenty so you can call *.roll_four_d12*. If you want a dice with more than twenty sides you can explicit declare the number of sides with *.roll_32_d3*
 
 ```ruby
 dice = Dice.new(20,2)
