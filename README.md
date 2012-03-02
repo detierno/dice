@@ -7,7 +7,7 @@ This gem was created with studies purpose. It simple create a dice and let you r
 Add to your Gemfile and run the `bundle` command to install it.
 
 ```ruby
-gem "dice" # not published yet will not work
+gem "rdice"
 ```
 
 **Requires Ruby 1.9.3 or later.**
