@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Denis"]
   s.email       = ["de.tierno@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Roll dices with different faces}
+  s.description = %q{This gem allow you to set dices and roll it lots of times}
 
   s.rubyforge_project = "dice"
 
