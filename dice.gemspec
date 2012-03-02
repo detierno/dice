@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["de.tierno@gmail.com"]
   s.homepage    = "https://github.com/detierno/dice"
   s.summary     = %q{Roll dices with different sides}
-  s.description = %q{This gem allow you to set dices and roll it. You can set custom defaults and change behavior to fit you purpose }
+  s.description = %q{This gem allow you to set dices and roll it. You can set custom defaults and change behavior to fit your purpose }
 
   s.rubyforge_project = "rdice"
 
