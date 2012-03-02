@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "rdice/version"
 
 Gem::Specification.new do |s|
-  s.name        = "dice"
+  s.name        = "rdice"
   s.version     = Rdice::VERSION
   s.authors     = ["Denis"]
   s.email       = ["de.tierno@gmail.com"]
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Roll dices with different faces}
   s.description = %q{This gem allow you to set dices and roll it lots of times}
 
-  s.rubyforge_project = "dice"
+  s.rubyforge_project = "rdice"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
