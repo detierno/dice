@@ -1,11 +1,11 @@
 class Dice
-  def initialize(faces=6, dices=1)
-    Dice::Config.faces = faces
+  def initialize(sides=6, dices=1)
+    Dice::Config.sides = sides
     Dice::Config.dices = dices
   end
 
-  def roll(faces=preferred_faces, dices=preferred_dices)
-    get_result(faces, dices)
+  def roll(sides=preferred_sides, dices=preferred_dices)
+    get_result(sides, dices)
   end
   
   def method_missing(method, *args, &block)
@@ -14,7 +14,7 @@ class Dice
     elsif method =~ /roll_(\w+)_d(\w+)/
       roll($2.to_i, translate_value($1))
     elsif method =~ /roll_(\w+)/
-      roll(preferred_faces,translate_value($1))
+      roll(preferred_sides,translate_value($1))
     else
       super
     end
@@ -22,16 +22,16 @@ class Dice
 
 private
 
-  def preferred_faces
-    Dice::Config.faces
+  def preferred_sides
+    Dice::Config.sides
   end
   
   def preferred_dices
     Dice::Config.dices
   end
 
-  def get_result(faces, dices)
-    (1..dices).inject(0) {|a, b| a + rand(faces) + 1 }
+  def get_result(sides, dices)
+    (1..dices).inject(0) {|a, b| a + rand(sides) + 1 }
   end
   
   def translate_value(number)

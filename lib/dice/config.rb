@@ -1,11 +1,11 @@
 class Dice
   class Config
-    def self.faces
-      @faces
+    def self.sides
+      @sides
     end
   
-    def self.faces=(faces)
-      @faces = faces
+    def self.sides=(sides)
+      @sides = sides
     end  
   
     def self.dices

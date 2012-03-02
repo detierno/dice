@@ -64,7 +64,7 @@ describe Dice do
      
   end
 
-  describe "new with 12 faces and 3 dices" do
+  describe "new with 12 sides and 3 dices" do
     
     describe ".roll" do
       let(:dice) { Dice.new(12,3) }

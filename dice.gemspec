@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Dice::VERSION
   s.authors     = ["Denis"]
   s.email       = ["de.tierno@gmail.com"]
-  s.homepage    = ""
-  s.summary     = %q{Roll dices with different faces}
-  s.description = %q{This gem allow you to set dices and roll it lots of times}
+  s.homepage    = "https://github.com/detierno/dice"
+  s.summary     = %q{Roll dices with different sides}
+  s.description = %q{This gem allow you to set dices and roll it. You can set custom defaults and change behavior to fit you purpose }
 
   s.rubyforge_project = "rdice"
 
@@ -18,8 +18,6 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # specify any dependencies here; for example:
   s.add_development_dependency "rspec"
   s.add_development_dependency "rake"
-  # s.add_runtime_dependency "rest-client"
 end
