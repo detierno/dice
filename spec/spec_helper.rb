@@ -1,1 +1,1 @@
-require 'rdice'
+require 'dice'
