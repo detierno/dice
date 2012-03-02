@@ -1,4 +1,4 @@
-# Dice
+# Dice [![Build Status](https://secure.travis-ci.org/detierno/dice.png?branch=master)](http://travis-ci.org/detierno/dice)
 
 This gem was created with studies purpose. It simple create a dice and let you roll one or more dices with different faces.
 
