@@ -16,7 +16,7 @@ gem "rdice"
 ## Usage
 
 
-Them most basic use you can create a new instance of Dice and perform some rolls. The returned value is a integer containing the sum of all dices rolled
+The most basic use you can create a new instance of Dice and perform some rolls. The returned value is a integer containing the sum of all dices rolled
 
 ```ruby
 dice = Dice.new
