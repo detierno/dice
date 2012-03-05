@@ -1,7 +1,8 @@
 class Dice
-  def initialize(sides=6, dices=1)
+  def initialize(sides=6, dices=1, array=false)
     Dice::Config.sides = sides
     Dice::Config.dices = dices
+    Dice::Config.array = array
   end
 
   def roll(sides=preferred_sides, dices=preferred_dices)
@@ -30,8 +31,18 @@ private
     Dice::Config.dices
   end
 
+  def result_in_array?
+    Dice::Config.array?
+  end
+
   def get_result(sides, dices)
-    (1..dices).inject(0) {|a, b| a + rand(sides) + 1 }
+    if result_in_array?
+      results = []
+      dices.times { results << (rand(sides) + 1).to_i }
+      results
+    else
+      (1..dices).inject(0) {|a, b| a + rand(sides) + 1 }
+    end
   end
   
   def translate_value(number)

@@ -109,7 +109,7 @@ describe Dice do
     describe ".roll_two_d10" do
       let(:dice) { Dice.new(12,3) }
 
-      it "return value between 1 to 10" do
+      it "return value between 2 to 20" do
         NTIMES.times { 2.upto(20).include?(dice.roll_two_d10).should be_true }
       end
       
