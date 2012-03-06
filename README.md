@@ -34,7 +34,7 @@ dice.roll_10_d3
 
 This gem comes with shortcuts of one to twenty so you can call *.roll_four_d12*. If you want a dice with more than twenty sides you can explicit declare the number of sides with *.roll_32_d3*
 
-If you call roll with only the number of times you want to roll it will roll the default dice with the required number of times
+If you call roll with only the number of times you want to roll it will roll the default dice with the required number of times.
 
 ## Changing the defaults
 
@@ -59,7 +59,8 @@ Dice::Config.dices= 3    # set default dices rolled to 3
 Dice::Config.array= true # change the result to a array without sum the dices
 
 # All these preferences can be setted on creation with
-dice = Dice.new(6,3,true) # by default roll three dices with six sides each and return a array as result
+dice = Dice.new(6,3,true) # by default roll three dices with six sides and return a array as result
+dice.roll # => [1, 5, 4]
 ```
 
 ## License
