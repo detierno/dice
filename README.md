@@ -19,13 +19,15 @@ gem "rdice"
 The most basic use you can create a new instance of Dice and perform some rolls. The returned value is a integer containing the sum of all dices rolled
 
 ```ruby
+require 'dice'
+
 dice = Dice.new
 
-dice.roll
-dice.roll_two 
-dice.roll_d20
-dice.roll_three_d8
-dice.roll_10_d3
+dice.roll           # rolls one dice with six sides by default
+dice.roll_two       # rolls two d6
+dice.roll_d20       # rolls one d20
+dice.roll_three_d8  # rolls three d8
+dice.roll_10_d3     # rolls ten d3
 
 # You can call the method roll directly if you preffer, just pass the number of sides and dices
 # dice.roll(20,4)
@@ -48,7 +50,7 @@ dice.roll_two      # rolls two d20
 dice.roll_four     # rolls four d20
 dice.roll_d20      # rolls two d20
 dice.roll_three_d8 # rolls three d8
-dice.roll_10_d3    # rolls 10 d3
+dice.roll_10_d3    # rolls ten d3
 ```
 
 There are three configs that you can change

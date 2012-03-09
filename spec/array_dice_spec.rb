@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Dice do
-  NTIMES = 300
+  ANTIMES = 300
   
   describe "new with default values as array" do
     
@@ -9,7 +9,7 @@ describe Dice do
       let(:dice) { Dice.new(6,1,true) }
 
       it "return value between a array with one element" do
-        NTIMES.times { dice.roll.size.should == 1 }
+        ANTIMES.times { dice.roll.size.should == 1 }
       end
     end
     
@@ -17,7 +17,7 @@ describe Dice do
       let(:dice) { Dice.new(6,1,true) }
       
       it "return a array of 2 elements" do
-        NTIMES.times do
+        ANTIMES.times do
           result = dice.roll_two
           result.size.should == 2
           result.class.should == Array
@@ -25,7 +25,7 @@ describe Dice do
       end
     
       it "and values are between 1 and 6" do
-        NTIMES.times do
+        ANTIMES.times do
           result = dice.roll_two
           result.each do |item|
             1.upto(6).include?(item).should be_true 
@@ -34,7 +34,7 @@ describe Dice do
       end
     
       it "cant return 0" do
-        NTIMES.times do
+        ANTIMES.times do
           result = dice.roll_two
           result.each do |item|
             item.should_not < 1
@@ -43,7 +43,7 @@ describe Dice do
       end
           
       it "cant be more then 6" do
-        NTIMES.times do
+        ANTIMES.times do
           result = dice.roll_two
           result.each do |item|
             item.should_not > 6
@@ -56,7 +56,7 @@ describe Dice do
       let(:dice) { Dice.new(6,1,true) }
       
       it "return a array of 1 element" do
-        NTIMES.times do
+        ANTIMES.times do
           result = dice.roll_d20
           result.size.should == 1
           result.class.should == Array
@@ -64,13 +64,13 @@ describe Dice do
       end
 
       it "return value between 1 to 20" do
-        NTIMES.times do
+        ANTIMES.times do
           dice.roll_d20.each { |item| 1.upto(20).include?(item).should be_true }
         end
       end
       
       it "cant return 21" do
-        NTIMES.times do
+        ANTIMES.times do
           dice.roll_d20.each { |item| item.should_not > 20 }
         end
       end
@@ -80,14 +80,14 @@ describe Dice do
       let(:dice) { Dice.new(6,1,true) }
       
       it "return a array of 2 elements" do
-        NTIMES.times do
+        ANTIMES.times do
           dice.roll_two_d10.size.should == 2
           dice.roll_two_d10.class.should == Array
         end
       end
 
       it "return value between 1 to 10" do
-        NTIMES.times { dice.roll_two_d10.each { |item| 1.upto(10).include?(item).should be_true } }
+        ANTIMES.times { dice.roll_two_d10.each { |item| 1.upto(10).include?(item).should be_true } }
       end
     end
   end
@@ -98,7 +98,7 @@ describe Dice do
       let(:dice) { Dice.new(12,3,true) }
 
       it "return value between a array with three elements" do
-        NTIMES.times { dice.roll.size.should == 3 }
+        ANTIMES.times { dice.roll.size.should == 3 }
       end
     end
     
@@ -106,7 +106,7 @@ describe Dice do
       let(:dice) { Dice.new(12,3,true) }
       
       it "return a array of 2 elements" do
-        NTIMES.times do
+        ANTIMES.times do
           result = dice.roll_two
           result.size.should == 2
           result.class.should == Array
@@ -114,7 +114,7 @@ describe Dice do
       end
     
       it "and values are between 1 and 12" do
-        NTIMES.times do
+        ANTIMES.times do
           result = dice.roll_two
           result.each do |item|
             1.upto(12).include?(item).should be_true 
@@ -123,7 +123,7 @@ describe Dice do
       end
     
       it "cant return 0" do
-        NTIMES.times do
+        ANTIMES.times do
           result = dice.roll_two
           result.each do |item|
             item.should_not < 1
@@ -132,7 +132,7 @@ describe Dice do
       end
           
       it "cant be more then 12" do
-        NTIMES.times do
+        ANTIMES.times do
           result = dice.roll_two
           result.each do |item|
             item.should_not > 12
@@ -145,7 +145,7 @@ describe Dice do
       let(:dice) { Dice.new(12,3,true) }
       
       it "return a array of 1 element" do
-        NTIMES.times do
+        ANTIMES.times do
           result = dice.roll_d20
           result.size.should == 3
           result.class.should == Array
@@ -153,13 +153,13 @@ describe Dice do
       end
 
       it "return value between 1 to 20" do
-        NTIMES.times do
+        ANTIMES.times do
           dice.roll_d20.each { |item| 1.upto(20).include?(item).should be_true }
         end
       end
       
       it "cant return 21" do
-        NTIMES.times do
+        ANTIMES.times do
           dice.roll_d20.each { |item| item.should_not > 20 }
         end
       end
@@ -169,14 +169,14 @@ describe Dice do
       let(:dice) { Dice.new(12,3,true) }
       
       it "return a array of 2 elements" do
-        NTIMES.times do
+        ANTIMES.times do
           dice.roll_two_d10.size.should == 2
           dice.roll_two_d10.class.should == Array
         end
       end
 
       it "return value between 1 to 10" do
-        NTIMES.times { dice.roll_two_d10.each { |item| 1.upto(10).include?(item).should be_true } }
+        ANTIMES.times { dice.roll_two_d10.each { |item| 1.upto(10).include?(item).should be_true } }
       end
     end
   end
